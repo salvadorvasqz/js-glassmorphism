@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/controls.css" />
+    <title>Glassmorphism CSS Generator</title>
+  </head>
+  <body>
+    <!-- Notification -->
+    <div class="notification" id="notification">
+      <span class="notification__text">Copied to clipboard</span>
+    </div>
+    <!-- Main container -->
+    <div class="main-container">
+      <div class="main-container__title">
+        <span class="main-container__title__text">Glassmorphism Generator</span>
+        <a
+          class="main-container__title__link"
+          href="https://github.com/salvadorvasqz/js-glassmorphism"
+          target="_blank"
+        >
+          <img
+            class="main-container__title__link__icon"
+            src="./static/images/github_logo.png"
+            alt="github"
+          />
+          <span class="main-container__title__link__title">Source</span>
+        </a>
+      </div>
+      <!-- Content container -->
+      <div class="container">
+        <!-- Glass result -->
+        <div class="container__result" id="div-result"></div>
+        <!-- Form container -->
+        <div class="container__content">
+          <!-- Opacity -->
+          <div class="container__content__input">
+            <span class="container__content__input__label">Opacity</span>
+            <input
+              class="container__content__input__control"
+              id="opacity-range"
+              type="range"
+              min="0"
+              max="100"
+            />
+          </div>
+          <!-- Blur -->
+          <div class="container__content__input">
+            <span class="container__content__input__label">Blur</span>
+            <input
+              class="container__content__input__control"
+              id="blur-range"
+              type="range"
+              min="0"
+              max="100"
+            />
+          </div>
+          <!-- Border opacity -->
+          <div class="container__content__input">
+            <span class="container__content__input__label">Border Opacity</span>
+            <input
+              class="container__content__input__control"
+              id="border-opacity-range"
+              type="range"
+              min="0"
+              max="100"
+            />
+          </div>
+          <!-- Border radius -->
+          <div class="container__content__input">
+            <span class="container__content__input__label">Border Radius</span>
+            <input
+              class="container__content__input__control"
+              id="border-radius-range"
+              type="range"
+              min="0"
+              max="100"
+            />
+          </div>
+          <!-- Color -->
+          <div class="container__content__input">
+            <span class="container__content__input__label">Color</span>
+            <input
+              class="container__content__input__control"
+              id="color-picker"
+              type="color"
+            />
+          </div>
+          <!-- Result -->
+          <div class="container__content__css">
+            <span class="container__content__css__label">CSS</span>
+            <pre id="css-result" class="container__content__css__result"></pre>
+            <button id="btn-copy" class="container__content__css__copy">
+              Copy to clipboard
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./scripts/helpers.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

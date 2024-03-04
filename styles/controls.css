@@ -1,0 +1,148 @@
+/* controls container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Result */
+.container__result {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  box-sizing: border-box;
+  transition: all 0.1s;
+}
+
+/* Form container */
+.container__content {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: calc(100vw - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Inputs container */
+.container__content__input {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* Labels */
+.container__content__input__label {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+.container__content__input__control {
+  width: 100%;
+}
+
+/* Range */
+input[type='range'] {
+  width: 100%;
+  height: 7px;
+  background: #fff;
+  background-image: linear-gradient(#858585, #858585);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 5px;
+  background: #858585;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Css code result */
+.container__content__css {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Label */
+.container__content__css__label {
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* Result */
+.container__content__css__result {
+  color: #fff;
+  overflow: auto;
+  font-size: 1.1rem;
+  line-height: 25px;
+  margin: 0px !important;
+}
+
+/* Copy button */
+.container__content__css__copy {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.1s;
+  margin-top: 10px;
+}
+
+/* Button active */
+.container__content__css__copy:active {
+  opacity: 0.5;
+}
+
+/* Notification */
+.notification {
+  --notification--width: 300px;
+  position: fixed;
+  z-index: 30;
+  width: var(--notification--width);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  top: -100px;
+  right: calc((100% / 2) - (var(--notification--width) / 2));
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.notification--show {
+  top: 30px;
+  opacity: 1;
+}
